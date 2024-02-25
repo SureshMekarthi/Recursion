@@ -10,7 +10,10 @@ namespace Recursion
     {
         static void Main(string[] args)
         {
-            PrintSum(1, 5, 0);
+
+          var result = CalculateFac(3);
+            Console.WriteLine(result);
+            //PrintSum(1, 5, 0);
             Console.ReadLine();
 
             // PrintNumber(1);
@@ -48,6 +51,17 @@ namespace Recursion
             }
             sum += i;
             PrintSum(i + 1, n, sum);
+        }
+
+        private static int CalculateFac(int n)
+        {
+              if(n==1||n==0)
+            {
+                return 1;
+            }
+            var facn1 = CalculateFac(n - 1);
+            var facN = n * facn1;
+            return facN;
         }
     }
 }
