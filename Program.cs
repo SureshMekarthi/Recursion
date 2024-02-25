@@ -10,8 +10,11 @@ namespace Recursion
     {
         static void Main(string[] args)
         {
-            PrintNumber(1);
-           Console.ReadLine();
+            SumOfNaturalNumbers(10);
+            Console.ReadLine();
+
+           // PrintNumber(1);
+           //Console.ReadLine();
         }
 
         private static void PrintNumber(int i)
@@ -22,6 +25,17 @@ namespace Recursion
                 PrintNumber(i+1);
             }
             return;
+        }
+
+        private static void SumOfNaturalNumbers(int n)
+        {
+            if(n==0)
+            {
+                return;
+            }
+            var result = (n * (n + 1)) / 2;
+            Console.WriteLine(result);
+            SumOfNaturalNumbers(n-1);
         }
     }
 }
