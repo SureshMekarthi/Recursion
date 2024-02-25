@@ -10,16 +10,16 @@ namespace Recursion
     {
         static void Main(string[] args)
         {
-            PrintNumber(5);
+            PrintNumber(1);
            Console.ReadLine();
         }
 
         private static void PrintNumber(int i)
         {
-            if (i > 0)
+            if (i <= 5)
             {
                 Console.WriteLine($"the i value is: {i}");
-                PrintNumber(i-1);
+                PrintNumber(i+1);
             }
             return;
         }
